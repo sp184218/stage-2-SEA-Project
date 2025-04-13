@@ -1,31 +1,58 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LA TV Shows | Home</title>
-    <meta name="description" content="A Catalog of Shows Set in Los Angeles" />
+    <title>Sydni's Big 3 M's | Home</title>
+    <meta name="description" content="A Nostalgic DVD Menu for Movies, Math, and Music" />
     <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="scripts.js"></script>
+    <script defer src="scripts.js"></script> <!-- Make sure this is 'defer' to wait for DOM -->
   </head>
 
   <body>
+    <!-- Intro Preview Modal -->
+<div id="intro-modal" class="modal">
+  <div class="modal-content">
+    <h1 class="dvd-title">Sydematic Presents</h1>
+    <p class="dvd-subtitle">A Big 3 M’s Production</p>
+    <video id="splash-video" autoplay muted playsinline>
+      <source src="sydematic.mp4" type="video/mp4" />
+    </video>
+  </div>
+</div>
+
     <header class="main-header">
-      <h1 class="title">LA TV Shows</h1>
+      <h1 class="title">Welcome to Sydni's Big 3 M's DVD Menu 🎬🎵➗</h1>
+      <p class="subtitle">Explore the world of Movies, Math, and Music </p>
     </header>
-    <div id="card-container"></div>
+
+    
+<!-- Background Video (DVD-style loop) -->
+<div class="background-video-wrapper">
+  <video autoplay muted loop playsinline id="main-bg-video">
+    <source src="Still don't know my name.mp4" type="video/mp4" />
+  </video>
+</div>
+
+    <div id="card-container">
+      <!-- Cards will be injected here via scripts.js -->
+    </div>
+
+    <!-- Template for cloning cards (will stay hidden) -->
     <div class="card" style="display: none">
       <div class="card-content">
-        <h2>TV Show Title</h2>
-        <img src="" alt="TV Show Poster" />
+        <h2>Category Title</h2>
+        <img src="" alt="Category Image" />
         <ul>
-          <li>Bullet Point 1</li>
-          <li>Bullet Point 2</li>
-          <li>Bullet Point 3</li>
+          <li>Detail 1</li>
+          <li>Detail 2</li>
+          <li>Detail 3</li>
         </ul>
       </div>
     </div>
+
     <div class="footer">
-      <button onclick="quoteAlert();">Get A Quote!</button>
-      <button onclick="removeLastCard();">Remove A Card!</button>
+      <button onclick="getRandomCategory()">Pick a Random M!</button>
+      <button onclick="removeLastCard()">Remove a Section</button>
     </div>
   </body>
 </html>
+
