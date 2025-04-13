@@ -8,12 +8,12 @@ const categories = [
   {
     title: "Music I Love 🎵",
     image: "images/music.jpg",
-    points: ["Lauryn Hill", "Frank Ocean", "Chillhop & Lofi"]
+    points: ["Lauryn Hill", "Kehlani", "Flawed Mangoes & Lofi"]
   },
   {
     title: "Math Concepts I Love ➕➗",
     image: "images/math.jpg",
-    points: ["Fractals", "Golden Ratio", "Symmetry"]
+    points: ["Astrology/Numerology", "Quantum Physics", "Coding DUH lol"]
   }
 ];
 // Function to create cards for each category
