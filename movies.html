@@ -4,28 +4,85 @@
     <title>Movies | Sydni's Big 3 M's</title>
     <meta name="description" content="Explore Movies in the 3 M's!" />
     <link rel="stylesheet" href="style.css" />
-  </head>
+    <script defer src="movie.js"></script> <!-- Make sure this is 'defer' to wait for DOM -->
+    <style>
+      /* Flip card styles for math page only */
+      .card {
+        perspective: 1000px;
+        width: 300px;
+        height: 450px; /* slightly taller to fit more content without scroll */
+        margin: 20px auto;
+        cursor: pointer;
+      }
+    
+      .card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+    
+      .card.flipped .card-inner {
+        transform: rotateY(180deg);
+      }
+    
+      .card-front,
+      .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        padding: 20px;
+        box-sizing: border-box;
+        border: 1px solid #000;
+        border-radius: 12px;
+        background-color: #000;
+        overflow: visible; /* 👈 removed scrollbars */
+      }
+    
+      .card-back {
+        transform: rotateY(180deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #100f0f;
+      }
+    
+      .card-image {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 10px;
+      }
+    
+      h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+    
+      ul {
+        padding-left: 20px;
+      }
+    
+      li {
+        margin-bottom: 8px;
+      }
+    </style>
+    
+     </head>
   <body>
     <header class="main-header">
-      <h1 class="title">🎬 Welcome to the Movies Section!</h1>
-      <p class="subtitle">My Favorite Films and Cinema Adventures</p>
-    </header>
-
-    <div class="background-video-wrapper">
-      <video autoplay muted loop playsinline id="main-bg-video">
-        <source src="dr. strange.mp4" type="video/mp4" />
-      </video>
-    </div>
+      <h1 class="title">➗ Welcome to the Movie Section!</h1>
+      <p class="subtitle"> Cinema is the dream made visible, where imagination dances with light and shadow, and our deepest perceptions are given form, breath, and life on hte screen.
+        <div class="background-video-wrapper">
+          <video autoplays loop playsinline controls id="main-bg-video" controls>
+            <source src="dr. strange.mp4" type="video/mp4">
+          </video>
+        </div>        
 
     <div id="card-container">
-      <div class="card">
-        <h2>Movie Highlights</h2>
-        <ul>
-          <li>Top 5 Picks</li>
-          <li>Behind the Scenes</li>
-          <li>Fun Movie Facts</li>
-        </ul>
-      </div>
+      <!-- Cards will be dynamically added here from math.js -->
+       
     </div>
 
     <div class="footer">
