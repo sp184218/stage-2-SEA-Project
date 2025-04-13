@@ -12,7 +12,7 @@
   justify-content: center;
   flex-direction: column;
   z-index: 1000;
-  animation: fadeOut 2s ease-in-out 7s forwards;
+  animation: fadeOut 2s ease-in-out 5s forwards;
   /* 3s delay before fadeOut animation starts */
 }
 /* Splash Modal */
@@ -141,6 +141,23 @@ body {
   margin: 5px 0;
 }
 
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #FFD700;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #FFD700;
+}
+
 .footer {
   text-align: center;
   margin: 30px 0;
@@ -159,6 +176,25 @@ body {
 
 .footer button:hover {
   background-color: #ffcc00;
+}
+.footer button {
+  background-color: #FFD700;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  box-shadow: 0 0 10px #FFD70055;
+  transition: all 0.3s ease;
+}
+
+.footer button:hover {
+  background-color: #fffacd;
+  color: #000;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #FFD700, 0 0 30px #fff;
 }
 
 /*added this to make sure the video preview is center */

@@ -2,17 +2,17 @@
 const categories = [
   {
     title: "Movies I Love 🎬",
-    image: "images/movies.jpg",
+    image: "inception 2.jpg",
     points: ["Inception", "The Matrix", "Spirited Away"]
   },
   {
     title: "Music I Love 🎵",
-    image: "images/music.jpg",
+    image: "lauryn hill.jpg",
     points: ["Lauryn Hill", "Kehlani", "Flawed Mangoes & Lofi"]
   },
   {
-    title: "Math Concepts I Love ➕➗",
-    image: "images/math.jpg",
+    title: "Math I Love ➕➗",
+    image: "binary code.jpg",
     points: ["Astrology/Numerology", "Quantum Physics", "Coding DUH lol"]
   }
 ];
@@ -23,6 +23,15 @@ function createCards() {
   categories.forEach((category) => {
     const card = document.createElement("div");
     card.classList.add("card");
+
+    // ✨ Add click-to-navigate logic
+    if (category.title.includes("Movies")) {
+      card.onclick = () => window.location.href = "movies.html";
+    } else if (category.title.includes("Music")) {
+      card.onclick = () => window.location.href = "music.html";
+    } else if (category.title.includes("Math")) {
+      card.onclick = () => window.location.href = "math.html";
+    }
 
     const content = document.createElement("div");
     content.classList.add("card-content");
@@ -48,6 +57,7 @@ function createCards() {
     container.appendChild(card);
   });
 }
+
 
 // Example feature functions
 function quoteAlert() {
