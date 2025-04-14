@@ -6,54 +6,104 @@
     <link rel="stylesheet" href="style.css" />
     <script defer src="movie.js"></script> <!-- Make sure this is 'defer' to wait for DOM -->
     <style>
+    
+
       /* Flip card styles for math page only */
       .card {
-        perspective: 1000px;
-        width: 300px;
-        height: 450px; /* slightly taller to fit more content without scroll */
-        margin: 20px auto;
-        cursor: pointer;
-      }
-    
-      .card-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        transition: transform 0.8s;
-        transform-style: preserve-3d;
-      }
-    
-      .card.flipped .card-inner {
-        transform: rotateY(180deg);
-      }
-    
-      .card-front,
-      .card-back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden;
-        padding: 20px;
-        box-sizing: border-box;
-        border: 1px solid #000;
-        border-radius: 12px;
-        background-color: #000;
-        overflow: visible; /* 👈 removed scrollbars */
-      }
-    
-      .card-back {
-        transform: rotateY(180deg);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #100f0f;
-      }
-    
-      .card-image {
-        max-width: 100%;
-        max-height: 100%;
-        border-radius: 10px;
-      }
+  perspective: 1000px;
+  width: 300px;
+  height: 450px; /* slightly taller to fit more content without scroll */
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  border-radius: 12px;
+  background-color: #000;
+  overflow: visible; /* 👈 removed scrollbars */
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background-color: #100f0f;
+  overflow-y: auto; /* allows scroll if content is too long */
+}
+
+.card-back h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card-back ul {
+  padding-left: 20px;
+}
+
+.card-back li {
+  margin-bottom: 8px;
+}
+
+.card-front {
+  display: flex; /* Enables flexbox on the front container */
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the image vertically */
+  height: 100%; /* Make sure the container takes full height */
+}
+
+.card-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensures the image scales proportionally */
+  border-radius: 10px;
+}
+
+
+.card-video {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Center the video container */
+.background-video-wrapper {
+  width: 100%;
+  max-width: 725px; /* Keeps it from getting too big */
+  height: 100%; /* Ensures it takes the full height */
+  display: flex; /* Flexbox for centering */
+  justify-content: center; /* Centers video horizontally */
+  align-items: center; /* Centers video vertically */
+  padding: 0; /* Removes any extra padding */
+  box-sizing: border-box;
+}
+
+/* Ensure the video scales correctly */
+#main-bg-video {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 12px;
+  object-fit: contain; /* Make sure the whole video is visible, without cropping */
+}
+
     
       h2 {
         font-size: 20px;
@@ -67,16 +117,20 @@
       li {
         margin-bottom: 8px;
       }
+      .footer {
+  text-align: center;
+  margin: 30px 0;
+}
     </style>
     
      </head>
   <body>
     <header class="main-header">
-      <h1 class="title">➗ Welcome to the Movie Section!</h1>
-      <p class="subtitle"> Cinema is the dream made visible, where imagination dances with light and shadow, and our deepest perceptions are given form, breath, and life on hte screen.
+      <h1 class="title">🎬 The Movie Room!</h1>
+      <p class="subtitle"> Cinema is the dream made visible, where imagination dances with light and shadow, and our deepest perceptions are given form, breath, and life on the screen.
         <div class="background-video-wrapper">
           <video autoplays loop playsinline controls id="main-bg-video" controls>
-            <source src="dr. strange.mp4" type="video/mp4">
+            <source src="spirited away.mp4" type="video/mp4">
           </video>
         </div>        
 
@@ -89,6 +143,13 @@
       <a href="index.html">
         <button>🔙 Back to Main Menu</button>
       </a>
+      <a href="music.html">
+        <button>🎵 The Music Room</button>
+      </a>
+    <a href="math.html">
+      <button>➗ The Math Room</button>
+    </a>
+  </div>
     </div>
   </body>
 </html>

@@ -57,7 +57,12 @@ function createCards() {
     container.appendChild(card);
   });
 }
-
+function getRandomCategory() {
+  const pages = ["movie.html", "music.html", "math.html"];
+  const randomIndex = Math.floor(Math.random() * pages.length);
+  const randomPage = pages[randomIndex];
+  window.location.href = randomPage;
+}
 
 // Example feature functions
 function quoteAlert() {
