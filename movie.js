@@ -9,14 +9,13 @@ const categories = [
       image: "astrology.jpg"
     },
     {
-      title: "Fun Math Facts about Myself ➗",
+      title: "Fun Movie Facts about Myself ➗",
       points: [
-        "Numbers were my first language: is something I would joke about but it's TRUE. I recognized that my soul reads the code, just as others read words. These different types of ways to see math aren't really separate. They're more so layers of the same divine pattern. Just as I breathe without learning, I resonate with numbers without explanation, because my soul already remembers the language. 'It is what it is' kind of thing lol"
-      ],
+        " I was in an ITT technical Institute commercial when I was a little girl. I wanted to be so many things, but battled my own internal insecurities. Now I embrace my struggles through challenging myself to live in authenticity and have gone viral through Tiktok and Snapchat when posting mainly movie/show clips that have people think, laugh, cry, smile, and express all kinds of emotions that help grow and uplift. :) "   ],
       image: "Mean girls.gif"
     },
     {
-      title: "The Concept of Quantum Physics➗",
+      title: "Top 5 Movies ",
       points: [
         "Quantum physics is like using math magic to predict how tiny invisible things behave, because we can't see them-- we can only understand them through patterns and numbers.",
         "Quantum physics reveals the math behind matter, showing that at the smallest level, reality dances to the rhythm of probability, vibration, and unseen connection."
@@ -110,20 +109,5 @@ const categories = [
 
   window.onload = function () {
     createCards(); // your card function
-
-   /*  const video = document.querySelector("video");
-
-    // Pause/play on click
-    if (video) {
-      video.addEventListener("click", () => {
-        if (video.paused) {
-          video.play();
-        } else {
-          video.pause();
-        }
-      }); */
-
-  
-      
   
   }

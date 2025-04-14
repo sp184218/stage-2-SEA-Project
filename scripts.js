@@ -26,7 +26,7 @@ function createCards() {
 
     // ✨ Add click-to-navigate logic
     if (category.title.includes("Movies")) {
-      card.onclick = () => window.location.href = "movies.html";
+      card.onclick = () => window.location.href = "movie.html";
     } else if (category.title.includes("Music")) {
       card.onclick = () => window.location.href = "music.html";
     } else if (category.title.includes("Math")) {
@@ -75,3 +75,26 @@ function removeLastCard() {
 window.onload = () => {
   createCards();
 };
+window.addEventListener("DOMContentLoaded", () => {
+  const video = document.getElementById("main-bg-video");
+  const overlay = document.getElementById("video-overlay");
+  const playButton = document.getElementById("play-button");
+
+  const tryPlay = () => {
+    video.play().then(() => {
+      overlay.style.display = "none"; // Hide overlay when it plays
+    }).catch((err) => {
+      overlay.style.display = "flex"; // Show overlay if blocked
+      console.warn("Autoplay blocked:", err);
+    });
+  };
+
+  // Try to autoplay on load
+  tryPlay();
+
+  // Let user manually start it if blocked
+  playButton.addEventListener("click", () => {
+    tryPlay();
+  });
+});
+

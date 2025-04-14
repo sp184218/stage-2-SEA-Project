@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="style.css" />
     <script defer src="scripts.js"></script> <!-- Make sure this is 'defer' to wait for DOM -->
   </head>
-
-  <body>
+<body>
     <!-- Intro Preview Modal -->
 <div id="intro-modal" class="modal">
   <div class="modal-content">
@@ -18,27 +17,25 @@
     </video>
   </div>
 </div>
-
-    <header class="main-header">
+   <header class="main-header">
       <h1 class="title">Welcome to Sydni's Big 3 M's Menu 🎬🎵➗</h1>
-      <p class="subtitle">Explore the world of Movies, Math, and Music </p>
+      <p class="subtitle">Explore the world of Movies, Math, and Music! 
+  <br>Feel free to utilize the ctrl/cmd + and ctrl/cmd - keys to zoom in and out for certain visuals of each catalogs if needed. :D</p>
     </header>
-
-    
 <!-- Background Video (DVD-style loop) -->
 <div class="background-video-wrapper">
-  <video autoplay loop playsinline controls id="main-bg-video">
+  <video loop playsinline controls id="main-bg-video">
     <source src="Still don't know my name.mp4" type="video/mp4" />
   </video>
 </div>
-
-    <div id="card-container">
+<!-- Play Button Overlay -->
+  <div id="video-overlay">
+    <button id="play-button">Tap to Play 🎬</button>
+  </div>
+ <div id="card-container">
       <!-- Cards will be injected here via scripts.js -->
     </div>
-
-  
-
-    <div class="footer">
+ <div class="footer">
       <button onclick="getRandomCategory()">Pick a Random M!</button>
       <button onclick="showextrainfo()">Extra Features!</button>
     </div>

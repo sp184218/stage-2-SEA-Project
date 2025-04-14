@@ -112,17 +112,28 @@ const categories = [
 
     const video = document.querySelector("video");
 
-    // Pause/play on click
-    if (video) {
-      video.addEventListener("click", () => {
-        if (video.paused) {
-          video.play();
-        } else {
-          video.pause();
-        }
-      });
-
-    
-      }
+   }
+   window.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("main-bg-video");
+    const overlay = document.getElementById("video-overlay");
+    const playButton = document.getElementById("play-button");
   
-  }
+    const tryPlay = () => {
+      video.play().then(() => {
+        overlay.style.display = "none"; // Hide overlay when it plays
+      }).catch((err) => {
+        overlay.style.display = "flex"; // Show overlay if blocked
+        console.warn("Autoplay blocked:", err);
+      });
+    };
+  
+    // Try to autoplay on load
+    tryPlay();
+  
+    // Let user manually start it if blocked
+    playButton.addEventListener("click", () => {
+      tryPlay();
+    });
+  });
+  
+  

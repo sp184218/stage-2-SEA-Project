@@ -67,6 +67,21 @@
       li {
         margin-bottom: 8px;
       }
+      #play-button {
+  background-color: #fff;
+  color: #000;
+  font-size: 20px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#play-button:hover {
+  background-color: #000;
+  color: #FFD700;
+}
     </style>
     
      </head>
@@ -79,7 +94,11 @@
           <video autoplay loop playsinline controls id="main-bg-video" controls>
             <source src="dr. strange.mp4" type="video/mp4">
           </video>
-        </div>        
+        </div>       
+        <!-- Play Button Overlay -->
+  <div id="video-overlay">
+    <button id="play-button">Tap to Play 🎬</button>
+  </div> 
 
     <div id="card-container">
       <!-- Cards will be dynamically added here from math.js -->

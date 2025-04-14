@@ -115,17 +115,9 @@ const categories = [
 
     const video = document.querySelector("video");
 
-    // Pause/play on click
-    if (video) {
-      video.addEventListener("click", () => {
-        if (video.paused) {
-          video.play();
-        } else {
-          video.pause();
-        }
-      });
+   
 
     
       }
   
-  }
+  
