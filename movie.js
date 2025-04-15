@@ -1,20 +1,20 @@
 const categories = [
   {
-    title: "My Love for Film 🎬",
+    title: "My Love for Film 📼🎬",
     video: "tv.mp4",
     points: [
       "I grew up between nature and the rise of tech, with cassette tapes, DVDs, and the rule of being home before the streetlights came on. As a child of two brilliant engineers, expectations were high. With APD (auditory processing disorder), film became my translator — helping me process, feel, and find my voice. Now, people would never guess I once struggled to speak clearly. I no longer conform — I create a world where I'm fully seen."
     ]
   },
   {
-    title: "Fun Movie Facts about Myself ➗",
+    title: "Fun Movie Facts about Myself 🎬",
     image: "imagine.jpg",
     points: [
       "I was in an ITT Technical Institute commercial when I was a little girl. I wanted to be so many things, but battled my own internal insecurities. Now I embrace my struggles through challenging myself to live in authenticity and have gone viral through TikTok and Snapchat by posting movie/show clips that make people think, laugh, cry, smile, and feel inspired. :)"
     ]
   },
   {
-    title: "Top 5 Movies",
+    title: "Top 5 Movies 🎬🍿",
     video: "film recorder.mp4",
     points: [
       "1. Inception",  
